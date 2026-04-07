@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 2026-04-07-paris-dining-weekly
 ---
 
