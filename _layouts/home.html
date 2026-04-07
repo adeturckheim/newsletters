@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-title">Newsletters</h1>
+    <p class="hero-subtitle">A small, personal archive of things worth re-reading.</p>
+  </div>
+</section>
+
+{{ content }}
+
+<section class="collections">
+  <div class="container">
+    {% assign ai_pages = site.pages | where_exp: "p", "p.path contains 'news/ai/'" | sort: "path" | reverse %}
+    {% if ai_pages.size > 0 %}
+    <div class="collection">
+      <header class="collection-header">
+        <span class="collection-icon">🤖</span>
+        <div>
+          <h2>AI Daily</h2>
+          <p>Daily briefings on the AI industry.</p>
+        </div>
+        <span class="collection-count">{{ ai_pages.size }}</span>
+      </header>
+      <div class="card-grid">
+        {% for p in ai_pages %}
+          {% assign date_part = p.title | slice: 0, 10 %}
+          {% assign rest = p.title | slice: 10, 100 | replace: "_", " · " | replace: "-", " " | strip %}
+          <a class="card" href="{{ p.url | relative_url }}">
+            <div class="card-date">{{ date_part }}</div>
+            <div class="card-title">{{ rest }}</div>
+            <div class="card-arrow">Read →</div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% assign paris_pages = site.pages | where_exp: "p", "p.path contains 'news/paris_restaurants/'" | sort: "path" | reverse %}
+    {% if paris_pages.size > 0 %}
+    <div class="collection">
+      <header class="collection-header">
+        <span class="collection-icon">🍽️</span>
+        <div>
+          <h2>Paris Dining</h2>
+          <p>Weekly notes on the Paris restaurant scene.</p>
+        </div>
+        <span class="collection-count">{{ paris_pages.size }}</span>
+      </header>
+      <div class="card-grid">
+        {% for p in paris_pages %}
+          {% assign date_part = p.title | slice: 0, 10 %}
+          {% assign rest = p.title | slice: 10, 100 | replace: "-", " " | strip %}
+          <a class="card" href="{{ p.url | relative_url }}">
+            <div class="card-date">{{ date_part }}</div>
+            <div class="card-title">{{ rest | capitalize }}</div>
+            <div class="card-arrow">Read →</div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
