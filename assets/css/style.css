@@ -204,10 +204,13 @@ a:hover { text-decoration: underline; }
 }
 .post-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid #d4d4d4;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 56px 64px;
+}
+@media (prefers-color-scheme: dark) {
+  .post-card { border-color: #3a3a44; }
 }
 @media (max-width: 600px) {
   .post-card { padding: 32px 24px; }
