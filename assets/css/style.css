@@ -51,7 +51,7 @@ a:hover { text-decoration: underline; }
   padding: 0 28px;
 }
 .container--reading {
-  max-width: 720px;
+  max-width: 680px;
 }
 
 /* ---------- Header ---------- */
@@ -204,13 +204,12 @@ a:hover { text-decoration: underline; }
 }
 .post-card {
   background: var(--bg-card);
-  border: 1px solid #d4d4d4;
+  border: 1px solid #1a1a1f;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
   padding: 56px 64px;
 }
 @media (prefers-color-scheme: dark) {
-  .post-card { border-color: #3a3a44; }
+  .post-card { border-color: #ececec; }
 }
 @media (max-width: 600px) {
   .post-card { padding: 32px 24px; }
