@@ -1,3 +1,8 @@
+---
+layout: default
+title: 2026-04-07-paris-dining-weekly
+---
+
 # 🍽️ Paris Dining Weekly — 2026-04-07
 
 *Window: 31 mars → 7 avril 2026*

@@ -1,0 +1,9 @@
+title: Newsletters
+description: A small archive of newsletters.
+theme: jekyll-theme-minimal
+
+defaults:
+  - scope:
+      path: "news"
+    values:
+      layout: default
