@@ -51,7 +51,7 @@ a:hover { text-decoration: underline; }
   padding: 0 28px;
 }
 .container--reading {
-  max-width: 920px;
+  max-width: 720px;
 }
 
 /* ---------- Header ---------- */
@@ -201,6 +201,16 @@ a:hover { text-decoration: underline; }
 /* ---------- Reading view ---------- */
 .post {
   padding: 56px 0 96px;
+}
+.post-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 56px 64px;
+}
+@media (max-width: 600px) {
+  .post-card { padding: 32px 24px; }
 }
 .back-link {
   display: inline-block;
