@@ -45,6 +45,7 @@ title: 2026-04-07-paris-dining-weekly
 - [Paris Select Book — *Spring in Paris: 6 new restaurants to discover for a gourmet meal* (2026-04-06)](https://www.parisselectbook.com/en/2026/04/06/spring-in-paris-6-new-restaurants-to-discover-for-a-gourmet-meal/)
 - [Paris Select Book — *Spring 2026: 9 new places to go out in Paris* (2026-04-05)](https://www.parisselectbook.com/en/2026/04/05/spring-2026-9-new-places-to-go-out-in-paris/)
 - [Sortir à Paris — *Calcifer, the brand new sizzling hot restaurant in République*](https://www.sortiraparis.com/en/where-to-eat-in-paris/restaurant/articles/341544-calcifer-the-brand-new-sizzling-hot-restaurant-in-republique)
+- [Sortir à Paris — *7 Must-Visit New Restaurants to Discover in Paris This April 2026*](https://www.sortiraparis.com/en/where-to-eat-in-paris/restaurant/guides/310860-7-must-try-new-restaurants-in-paris-for-april-2026)
 
 ## ✅ Recency check (hidden, for me only)
 
