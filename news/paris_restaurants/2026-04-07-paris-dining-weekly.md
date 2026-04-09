@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2026-04-07-paris-dining-weekly
+title: Paris Dining Weekly
 ---
 
 # 🍽️ Paris Dining Weekly — 2026-04-07
