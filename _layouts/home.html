@@ -28,23 +28,24 @@ layout: default
       </header>
       <div class="card-grid">
         {% for p in ai_pages %}
-          {% assign date_str = p.title | slice: 0, 10 %}
-          {% assign day_num = p.title | slice: 8, 2 | plus: 0 %}
-          {% assign month_num = p.title | slice: 5, 2 | plus: 0 %}
+          {% assign path_parts = p.path | split: "/" %}
+          {% assign basename = path_parts | last | replace: ".md", "" %}
+          {% assign date_str = basename | slice: 0, 10 %}
+          {% assign day_num = basename | slice: 8, 2 | plus: 0 %}
+          {% assign month_num = basename | slice: 5, 2 | plus: 0 %}
           {% assign month_idx = month_num | minus: 1 %}
           {% assign month_fr = months_fr[month_idx] %}
           {% assign wday_num = date_str | date: "%u" | plus: 0 %}
           {% assign wday_idx = wday_num | minus: 1 %}
           {% assign weekday_fr = weekdays_fr[wday_idx] %}
-          {% assign time_hh = p.title | slice: 11, 2 %}
-          {% assign time_mm = p.title | slice: 13, 2 %}
-          {% assign title_text = p.title | slice: 17, 100 | strip %}
+          {% assign time_hh = basename | slice: 11, 2 %}
+          {% assign time_mm = basename | slice: 13, 2 %}
           <a class="card" href="{{ p.url | relative_url }}">
             <div class="card-date">
               <span class="card-date-main">{{ weekday_fr }} {{ day_num }} {{ month_fr }}</span>
               <span class="card-date-time">{{ time_hh }}:{{ time_mm }}</span>
             </div>
-            <div class="card-title">{{ title_text }}</div>
+            <div class="card-title">{{ p.title }}</div>
             <div class="card-arrow">Read →</div>
           </a>
         {% endfor %}
@@ -65,20 +66,21 @@ layout: default
       </header>
       <div class="card-grid">
         {% for p in paris_pages %}
-          {% assign date_str = p.title | slice: 0, 10 %}
-          {% assign day_num = p.title | slice: 8, 2 | plus: 0 %}
-          {% assign month_num = p.title | slice: 5, 2 | plus: 0 %}
+          {% assign path_parts = p.path | split: "/" %}
+          {% assign basename = path_parts | last | replace: ".md", "" %}
+          {% assign date_str = basename | slice: 0, 10 %}
+          {% assign day_num = basename | slice: 8, 2 | plus: 0 %}
+          {% assign month_num = basename | slice: 5, 2 | plus: 0 %}
           {% assign month_idx = month_num | minus: 1 %}
           {% assign month_fr = months_fr[month_idx] %}
           {% assign wday_num = date_str | date: "%u" | plus: 0 %}
           {% assign wday_idx = wday_num | minus: 1 %}
           {% assign weekday_fr = weekdays_fr[wday_idx] %}
-          {% assign rest = p.title | slice: 10, 100 | replace: "-", " " | strip %}
           <a class="card" href="{{ p.url | relative_url }}">
             <div class="card-date">
               <span class="card-date-main">{{ weekday_fr }} {{ day_num }} {{ month_fr }}</span>
             </div>
-            <div class="card-title">{{ rest | capitalize }}</div>
+            <div class="card-title">{{ p.title }}</div>
             <div class="card-arrow">Read →</div>
           </a>
         {% endfor %}
